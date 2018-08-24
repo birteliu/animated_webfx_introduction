@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>flexbox 排版入門</h2>
+    <hr>
+    <div class="flexrow">
+        <div>
+            <h3>使用 flex 控制份數</h3>
+            <div class="flexcard">
+                <div class="left">Left 6</div>
+                <div class="mid">Mid 120px</div>
+                <div class="right">Right 4</div>
+            </div>
+        </div>
+        <div>
+            <h3>使用 flex-direction 控制軸向</h3>
+            <div class="flexcard flexcard2">
+                <div class="left">Left 6</div>
+                <div class="mid">Mid 120px</div>
+                <div class="right">Right 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flexrow">
+        <div>
+            <h3>使用 flex-grow 控制膨脹分配</h3>
+            <div class="flexcard flexcard3">
+                <div class="left">Left 50px</div>
+                <div class="mid">Mid 100px</div>
+                <div class="right">Right 150px<br>flex-grow:0;</div>
+            </div>
+        </div>
+        <div>
+            <h3>使用 flex-shrink 控制縮減分配</h3>
+            <div class="flexcard flexcard4">
+                <div class="left">Left 50px</div>
+                <div class="mid">Mid 100px<br>flex-shrink: 0;</div>
+                <div class="right">Right 150px</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flexrow">
+        <div>
+            <h3>使用 flex-direction 橫向反向順序 row-reverse</h3>
+            <div class="flexcard flexcard5">
+                <div class="left">Left 50px</div>
+                <div class="mid">Mid 100px</div>
+                <div class="right">Right 150px</div>
+            </div>
+        </div>
+        <div>
+            <h3>使用 flex-direction 直向反向順序 column-reverse</h3>
+            <div class="flexcard flexcard6">
+                <div class="left">Left 50px</div>
+                <div class="mid">Mid 100px</div>
+                <div class="right">Right 150px</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>物件排列</h2>
+    <hr>
+    <div class="flexrow">
+        <div>
+            <h4>justify-content: flex-start;<br>align-items: flex-start;</h4>
+            <div class="items">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4><span>justify-content: center;</span><br>align-items: flex-start;</h4>
+            <div class="items jCenter">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4><span>justify-content: flex-end;</span><br>align-items: flex-start;</h4>
+            <div class="items jEnd">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+    </div>
+    <div class="flexrow">
+        <div>
+            <h4>justify-content: flex-start;<br><span>align-items: center;</span></h4>
+            <div class="items aCenter">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4><span>justify-content: center;<br>align-items: center;</span></h4>
+            <div class="items jCenter aCenter">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4><span>justify-content: flex-end;<br>align-items: center;</span></h4>
+            <div class="items jEnd aCenter">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+    </div>
+    <div class="flexrow">
+        <div>
+            <h4>justify-content: flex-start;<br><span>align-items: flex-end;</span></h4>
+            <div class="items aEnd">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4><span>justify-content: center;<br>align-items: flex-end;</span></h4>
+            <div class="items jCenter aEnd">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4><span>justify-content: flex-end;<br>align-items: flex-end;</span></h4>
+            <div class="items jEnd aEnd">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>空間排列</h2>
+    <hr>
+    <div class="flexrow">
+        <div>
+            <h4>justify-content: space-between;</h4>
+            <div class="items aCenter jBetween">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4>justify-content: space-around;</h4>
+            <div class="items aCenter jAround">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div>
+            <h4>justify-content: space-evenly;</h4>
+            <div class="items aCenter jEvenly">
+                <div class="main-axis">主軸 justify</div>
+                <div class="sub-axis">副軸 align</div>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

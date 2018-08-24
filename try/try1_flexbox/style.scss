@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 10px 25px;
+}
+h2,
+h3,
+h4 {
+  margin: 0;
+  margin-top: 15px;
+}
+.flexrow {
+  //border: 1px solid #000;
+  display: flex;
+  > div {
+    flex: 1;
+  }
+  .flexcard {
+    border: 2px solid #000;
+    width: 90%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    .left,
+    .mid,
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .left {
+      background-color: #ffc3a6;
+      flex: 6;
+    }
+    .mid {
+      background-color: #ffa935;
+      flex: 120px;
+    }
+    .right {
+      background-color: #e05042;
+      flex: 4;
+    }
+  }
+  .flexcard2 {
+    flex-direction: column;
+  }
+  .flexcard3 {
+    .left {
+      flex: 50px;
+    }
+    .mid {
+      flex: 100px;
+    }
+    .right {
+      flex: 150px;
+      flex-grow: 0; //寬度超過時，不會隨著頁面寬度而膨脹，固定在 150px
+    }
+  }
+  .flexcard4 {
+    .left {
+      flex: 50px;
+    }
+    .mid {
+      flex: 100px;
+      flex-shrink: 0; //寬度縮小時，不會隨著頁面寬度而縮小，固定在 100px
+    }
+    .right {
+      flex: 150px;
+    }
+  }
+  .flexcard5 {
+    flex-direction: row-reverse;
+    .left {
+      flex: 50px;
+    }
+    .mid {
+      flex: 100px;
+    }
+    .right {
+      flex: 150px;
+    }
+  }
+  .flexcard6 {
+    flex-direction: column-reverse;
+    .left {
+      flex: 50px;
+    }
+    .mid {
+      flex: 100px;
+    }
+    .right {
+      flex: 150px;
+    }
+  }
+
+  //
+  h4 span {
+    color: #ff4443;
+  }
+  .items {
+    border: 2px solid #000;
+    width: 90%;
+    height: 200px;
+    display: flex;
+    position: relative;
+
+    .main-axis {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      top: 50%;
+      border: solid 2px #c95747;
+      color: #c95747;
+    }
+    .sub-axis {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      left: 50%;
+      border: solid 2px #6842a4;
+      color: #6842a4;
+    }
+    .item {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 230, 216, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fff;
+      z-index: 1;
+      color: #c95747;
+    }
+  }
+  .jCenter {
+    justify-content: center;
+  }
+  .jEnd {
+    justify-content: flex-end;
+  }
+  .aCenter {
+    align-items: center;
+  }
+  .aEnd {
+    align-items: flex-end;
+  }
+  .jBetween {
+    justify-content: space-between;
+  }
+  .jAround {
+    justify-content: space-around;
+  }
+  .jEvenly {
+    justify-content: space-evenly;
+  }
+}
